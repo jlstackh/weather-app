@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>WhichWeather</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>
+            WhichWeather⛅
+        </h1>
+        
+        <div class="topnav">
+            <form>
+                <input type="text" id="searchContent" placeholder="search by city, state, country..." />
+                <button type="button" id="searchButton">Search</button>
+            </form>
+            <p id="searchDisplay"></p>
+        </div>
+        
+        <div>
+            <p id="dateText"></p>
+        </div>
+        
+        <div class="card" style="width: 50rem;">
+            <div class="card-body">
+                <div class="now">
+                    <h5 class="card-title" id="cityG">Greensboro</h5>
+                    <h5 class="weather-now" id="temp">92°⛅</h5>
+                </div>
+                <h6 class="card-subtitle mb-2 text-muted">5 Day Forecast</h6>
+        
+                <div class="container">
+                    <div class="row">
+                        <p class="weather-content">
+        
+                        <div class="col-4">
+                            <div class="degree">
+                                <ul>
+                                    <li>92°</li>
+                                    <li>94°</li>
+                                    <li>92°</li>
+                                    <li>96°</li>
+                                    <li>98°</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <div class="col-4">
+                            <div class="emoji">
+                                <ul>
+                                    <li>🌧</li>
+                                    <li>🌥</li>
+                                    <li>☀</li>
+                                    <li>🌤</li>
+                                    <li>🌧</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <div class="col-4">
+                            <div class="description">
+                                <ul>
+                                    <li>Sunny</li>
+                                    <li>Rainy</li>
+                                    <li>Rainy</li>
+                                    <li>Partly Cloudy</li>
+                                    <li>Rainy</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        </p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+      <script src="src/app.js"></script>
+    </div>
+  </body>
+</html>

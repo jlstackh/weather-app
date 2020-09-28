@@ -6,10 +6,6 @@ h1 {
   padding: 10px;
 }
 
- {
-  box-sizing: border-box;
-}
-
 .topnav button {
   float: center;
   padding: 6px;
@@ -49,6 +45,7 @@ h1 {
   border: solid 2px #46484d;
   margin-top: 0px;
   border-radius: 9px;
+  box-sizing: border-box;
 }
 
 ul {

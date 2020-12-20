@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weatherAppStyling.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+    
+    <div class="pageContent">
+                    <div class="search-bar" style="">
+                        <p style="display:inline-block;">Search for weather:</p>
+                        <input type="text" placeholder="City Name" style="display:inline-block;" id="searchTextBox">
+                        <button id="searchButton" style="height:24px;width:fit-content;padding-left:5px;padding-right:5px;">Search</button>
+                    </div>
+        <div class="header">
+
+            <h1 id="placeTempHead" style="display:inline-block">please enable Javascript to view data</h1>
+            <img id="weatherIcon" style="display:inline-block;background-color:#4081bd;height:38px;border-radius:10px;" src="" alt="">
+            <div class="otherData">
+                <p>Wind Speed: <span id=windSpeed></span> mph</p>
+                <p>Humidity: <span id=humidity></span></p>
+                <p>Weather Description: <span id=weatherDescription></span></p>
+            </div>
+            <h2><span class="tempValue" id="currentTemp">Temperature</span><span class="degreeUnit">°F</span></h2>
+            <h2>
+                <span class="tempValue" id="highCurrent">Temperature</span>
+                <span class="degreeUnit">°F</span>
+                /
+                <span class="low tempValue" id="lowCurrent">Temperature</span>
+                <span class="degreeUnit">°F</span>
+            </h2>
+        </div>
+
+        <div class="AllDays">
+
+            <div class="day">
+                <h3 id="tomorrowTitle">Tomorrow</h3>
+                <h4 class="tempFraction">
+                    <span class="high tempValue" id="tomorrowHigh">Temperature</span>
+                    <span class="degreeUnit">°F</span>
+                    /
+                    <span class="low tempValue" id="tomorrowLow">Temperature</span>
+                    <span class="degreeUnit">°F</span></h4>
+            </div>
+
+            <div class="day">
+                <h3 id="twoDayTitle">Two Days</h3>
+                <h4 class="tempFraction">
+                    <span class="high tempValue" id="twoDayHigh">Temperature</span>
+                    <span class="degreeUnit">°F</span>
+                    /
+                    <span class="low tempValue" id="twoDayLow">Temperature</span>
+                    <span class="degreeUnit">°F</span></h4>
+                </h4>
+            </div>
+
+            <div class="day">
+                <h3 id="threeDayTitle">Three Days</h3>
+                <h4 class="tempFraction">
+                    <span class="high tempValue" id="threeDayHigh">Temperature</span>
+                    <span class="degreeUnit">°F</span>
+                    /
+                    <span class="low tempValue" id="threeDayLow">Temperature</span>
+                    <span class="degreeUnit">°F</span></h4>
+                </h4>
+            </div>
+
+        </div>
+
+
+        <button type="button" name="button" id="changeCity">Change City</button>
+        <button type="button" name="button" id="changeUnits" onclick="changeUnits()">Change Units</button>
+    </div>
+
+    <div id="cityModal" class="modal" onclick="closeModal()">
+        <div class="modalContent">
+            <span id="cityArray"></span>
+        </div>
+    </div>
+
+</body>
+
+</html>
